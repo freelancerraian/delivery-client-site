@@ -1,0 +1,94 @@
+.custom-logo{
+    width: 68px;
+    height: 68px;
+}
+
+/* button style */
+.btn-nav .btn-ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.btn-nav .btn-ul .btn-li {
+    --c: #E02C6D;
+    color: var(--c);
+    font-size: 16px;
+    border: 0.3em solid var(--c);
+    border-radius: 0.5em;
+    width: 8em;
+    height: 3em;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: sans-serif;
+    letter-spacing: 0.1em;
+    text-align: center;
+    line-height: 3em;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+    transition: 0.5s;
+    margin: 1em;
+}
+
+.btn-nav .btn-ul .btn-li span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.btn-nav .btn-ul .btn-li:hover {
+    color: rgb(255, 255, 255);
+}
+
+.btn-nav .btn-ul .btn-li:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.btn-nav .btn-ul .btn-li span:nth-child(1) {
+    --n: 1;
+}
+
+.btn-nav .btn-ul .btn-li span:nth-child(2) {
+    --n: 2;
+}
+
+.btn-nav .btn-ul .btn-li span:nth-child(3) {
+    --n: 3;
+}
+
+.btn-nav .btn-ul .btn-li span:nth-child(4) {
+    --n: 4;
+}
+
+.btn-li{
+    text-decoration: none;
+}
+/* button style */
+
+.user-img {
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    /* margin-left: 5%; */
+    border: none;
+    margin-right: 10px;
+}
+.head-login-sec{
+    align-items: center;
+}
+
+.cus-style{
+    font-weight: 600;
+}
+
+.user-info{
+    align-items: baseline;
+}

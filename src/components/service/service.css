@@ -1,0 +1,25 @@
+.service {
+    background-color: rgb(255, 255, 255);
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px -9px #1c1a1a;
+}
+
+.service img {
+    width: 60%;
+}
+.service-btn{
+    border: 1px solid rgb(102, 55, 55);
+    border-radius: 20px;
+    font-weight: 600;
+    box-shadow: 0px 0px 20px -9px #1c1a1a;
+}
+.service-btn:hover{
+    background: #F8F9FA;
+}
+.service-img{
+    margin: 0 auto;
+    display: flex;
+}
+.fw-bold{
+    font-weight: 600;
+}

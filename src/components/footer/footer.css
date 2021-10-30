@@ -1,0 +1,31 @@
+.foot-span{
+    font-weight: 600;
+}
+.footer-img{
+    width: 100%;
+}
+.icons i{
+    padding: 4px;
+    cursor: pointer;
+}
+.footer-news:hover{
+    color: #FFCC00;
+    cursor: pointer;
+}
+.service-foot h6{
+    font-weight: 600;
+    cursor: pointer;
+}
+.service-foot h6:hover {
+    color: #FFCC00;
+}
+.links h6{
+    font-weight: 600;
+    cursor: pointer;
+}
+.links h6:hover {
+    color: #FFCC00;
+}
+.footer{
+    background: #F8F9FA;
+}

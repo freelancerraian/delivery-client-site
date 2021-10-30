@@ -1,23 +1,61 @@
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from './components/header/header';
+import About from './components/about/about';
+import Home from './components/home/home';
+import Notfound from './components/notfound/notfound';
+import Footer from './components/footer/footer';
+import Contact from './components/contact/contact';
+import Registration from './components/registration/registration';
+import Login from './components/login/login';
+import PrivetRoute from "./components/PrivetRoute/privetRoute";
+import AuthProvider from "./context/AuthProvider";
+import Services from './components/services/services';
+import Details from './components/details/details';
+import AddService from './components/addservice/addservice';
+import UpdateService from './components/updateservice/updateservice';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <AuthProvider>
+        <Router>
+          <Header></Header>
+          <Switch>
+            <Route exact path="/">
+              <Home></Home>
+            </Route>
+            <Route path="/services">
+              <Services></Services>
+            </Route>
+            <Route path="/about">
+              <About></About>
+            </Route>
+            <Route path="/contact">
+              <Contact></Contact>
+            </Route>
+            <Route path="/registration">
+              <Registration></Registration>
+            </Route>
+            <Route path="/login">
+              <Login></Login>
+            </Route>
+            <PrivetRoute path="/details/:_id">
+              <Details></Details>
+            </PrivetRoute>
+            <PrivetRoute path="/dashboard">
+              <AddService></AddService>
+            </PrivetRoute>
+            <PrivetRoute path="/updateservice">
+              <UpdateService></UpdateService>
+            </PrivetRoute>
+            <Route path="*">
+              <Notfound></Notfound>
+            </Route>
+          </Switch>
+          <Footer></Footer>
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

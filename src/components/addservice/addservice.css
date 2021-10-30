@@ -1,0 +1,15 @@
+.add {
+    display: flex;
+    flex-direction: column;
+}
+.addservice {
+   box-shadow: 0px 0px 20px -9px #1c1a1a;
+   border-radius: 20px;
+}
+.addbtn{
+    border: none;
+    background: rgb(255, 255, 255);
+}
+.service-text{
+    margin: 0 auto;
+}
