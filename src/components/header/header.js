@@ -69,7 +69,7 @@ const Header = () => {
                 <div className="d-flex head-login-sec">
                   <div className="user-info d-flex">
                     <span>
-                      <h5>{user.displayName}</h5>
+                      {/* <h5>{user.displayName}</h5> */}
                     </span>
                     {user.photoURL ? (
                       <span>
