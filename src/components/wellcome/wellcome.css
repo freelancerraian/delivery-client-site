@@ -1,0 +1,31 @@
+.well {
+    background: #12CBBB;
+}
+
+.well h2 {
+    color: rgb(255, 255, 255);
+}
+
+.wellcome {
+    background: linear-gradient(#00000094, #00000094), url(../../img/wellcome.jpg) no-repeat;
+    background-position: center;
+    width: 100%;
+    background-size: cover;
+    min-height: 900px;
+}
+
+.texts {
+    background: rgb(255, 255, 255);
+}
+
+.main-well {
+    padding-top: 20%;
+}
+
+.well-main {
+    padding-left: 2%;
+}
+
+.care {
+    color: #12CBBB;
+}

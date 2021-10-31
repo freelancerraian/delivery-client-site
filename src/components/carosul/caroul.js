@@ -41,9 +41,9 @@ const Caroul = () => {
                   <div className="carousel-inner">
                     <div className="carousel-item active">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Maiores similique quos aliquam minima, delectus
-                        animi pariatur architecto non voluptatem? Aliquam?
+                        information about reactions to a product, a person's
+                        performance of a task, etc. which is used as a basis for
+                        improvement.
                       </p>
                       <img
                         className="feedback-img img-thumbnail rounded-circle mb-3"
@@ -54,9 +54,9 @@ const Caroul = () => {
                     </div>
                     <div className="carousel-item">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Maiores similique quos aliquam minima, delectus
-                        animi pariatur architecto non voluptatem? Aliquam?
+                        information about reactions to a product, a person's
+                        performance of a task, etc. which is used as a basis for
+                        improvement.
                       </p>
                       <img
                         className="feedback-img img-thumbnail rounded-circle mb-3"
@@ -67,9 +67,9 @@ const Caroul = () => {
                     </div>
                     <div className="carousel-item">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Maiores similique quos aliquam minima, delectus
-                        animi pariatur architecto non voluptatem? Aliquam?
+                        information about reactions to a product, a person's
+                        performance of a task, etc. which is used as a basis for
+                        improvement.
                       </p>
                       <img
                         className="feedback-img img-thumbnail rounded-circle mb-3"
@@ -80,9 +80,9 @@ const Caroul = () => {
                     </div>
                     <div className="carousel-item">
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Maiores similique quos aliquam minima, delectus
-                        animi pariatur architecto non voluptatem? Aliquam?
+                        information about reactions to a product, a person's
+                        performance of a task, etc. which is used as a basis for
+                        improvement.
                       </p>
                       <img
                         className="feedback-img img-thumbnail rounded-circle mb-3"

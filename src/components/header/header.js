@@ -60,6 +60,11 @@ const Header = () => {
                       Manage Service
                     </NavLink>
                   </li>
+                  <li className="nav-item cus-style">
+                    <NavLink className="nav-link" to="/orders">
+                      All Orders
+                    </NavLink>
+                  </li>
                 </ul>
                 <div className="d-flex head-login-sec">
                   <div className="user-info d-flex">

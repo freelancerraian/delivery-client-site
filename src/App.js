@@ -15,7 +15,7 @@ import Details from './components/details/details';
 import UpdateService from './components/updateservice/updateservice';
 import Dashboard from './components/dashbard/dashboard';
 import UpdateUser from './components/updateuser/updateuser';
-import Checkout from './components/checkout/checkout';
+import Orders from './components/orders/orders';
 
 function App() {
   return (
@@ -51,8 +51,11 @@ function App() {
             <PrivetRoute path="/updateservice">
               <UpdateService></UpdateService>
             </PrivetRoute>
-            <PrivetRoute path="/checkout">
-              <Checkout></Checkout>
+            <PrivetRoute path="/orders">
+              <Orders></Orders>
+            </PrivetRoute>
+            <PrivetRoute path="/orders/:id">
+              <Orders></Orders>
             </PrivetRoute>
             <PrivetRoute path="/users/update/:id">
               <UpdateUser></UpdateUser>
