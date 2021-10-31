@@ -7,12 +7,14 @@ const AddService = () => {
   const { register, handleSubmit, reset } = useForm();
 
   const onSubmit = (data) => {
-    axios.post("http://localhost:5000/services", data).then((res) => {
-      if (res.data.insertedId) {
-        alert("Add Successfull");
-        reset();
-      }
-    });
+    axios
+      .post("https://obscure-shelf-23886.herokuapp.com/services", data)
+      .then((res) => {
+        if (res.data.insertedId) {
+          alert("Add Successfull");
+          reset();
+        }
+      });
   };
 
   return (

@@ -12,8 +12,10 @@ import PrivetRoute from "./components/PrivetRoute/privetRoute";
 import AuthProvider from "./context/AuthProvider";
 import Services from './components/services/services';
 import Details from './components/details/details';
-import AddService from './components/addservice/addservice';
 import UpdateService from './components/updateservice/updateservice';
+import Dashboard from './components/dashbard/dashboard';
+import UpdateUser from './components/updateuser/updateuser';
+import Checkout from './components/checkout/checkout';
 
 function App() {
   return (
@@ -44,10 +46,16 @@ function App() {
               <Details></Details>
             </PrivetRoute>
             <PrivetRoute path="/dashboard">
-              <AddService></AddService>
+              <Dashboard></Dashboard>
             </PrivetRoute>
             <PrivetRoute path="/updateservice">
               <UpdateService></UpdateService>
+            </PrivetRoute>
+            <PrivetRoute path="/checkout">
+              <Checkout></Checkout>
+            </PrivetRoute>
+            <PrivetRoute path="/users/update/:id">
+              <UpdateUser></UpdateUser>
             </PrivetRoute>
             <Route path="*">
               <Notfound></Notfound>

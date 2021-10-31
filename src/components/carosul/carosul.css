@@ -1,0 +1,27 @@
+#feedback {
+    background: #0d0442;
+    padding: 7% 10%;
+}
+
+.hr-style {
+    border: 5px dotted white;
+    border-bottom: none;
+    width: 50px;
+    margin: 0px auto;
+}
+
+.carousel-item {
+    padding: 5% 15%;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 5px;
+}
+
+.feedback-img {
+    width: 120px;
+    height: auto;
+}
+
+.carousel-indicators {
+    bottom: -20px;
+}

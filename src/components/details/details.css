@@ -12,3 +12,15 @@
 .Order button:hover{
     color: rgb(255, 255, 255);
 }
+.details-img{
+    width: 50%;
+}
+.cart-img{
+    display: flex;
+    justify-content: center;
+}
+.cart{
+    border: 1px solid goldenrod;
+    border-radius: 30px;
+    justify-content: center;
+}

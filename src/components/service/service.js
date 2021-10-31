@@ -26,12 +26,12 @@ const Service = ({ service }) => {
         </p>
         <p className="px-3">
           <span className="fw-bold">Time: </span>
-          {time}
+          {time} Hours
         </p>
         <div className="d-flex justify-content-center">
           <Link to={`/details/${_id}`}>
             <button className="btn service-btn m-2">
-              Get {name.toLowerCase()}
+              Get {name.toLowerCase()} Service
             </button>
           </Link>
         </div>

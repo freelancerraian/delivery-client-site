@@ -2,6 +2,7 @@ import { getAuth, signInWithEmailAndPassword } from "@firebase/auth";
 import React, { useState } from "react";
 import { useHistory, useLocation } from "react-router";
 import { Link } from "react-router-dom";
+import './login.css'
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -39,7 +40,7 @@ const Login = () => {
       });
   };
   return (
-    <div>
+    <div className="">
       <form
         onSubmit={handleRegistration}
         className="my-5 p-4 rounded shadow mx-auto"

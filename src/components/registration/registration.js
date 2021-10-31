@@ -1,7 +1,7 @@
 import "./registration.css";
 import { Link, useLocation, useHistory } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 const Registration = () => {
@@ -10,18 +10,55 @@ const Registration = () => {
   const { signInusingGoogle } = useAuth();
   const location = useLocation();
   const history = useHistory();
+  const [Data, setData] = useState([]);
   const redirect_url = location.state?.from || "/";
+
+  useEffect(() => {
+    fetch("https://obscure-shelf-23886.herokuapp.com/users")
+      .then((res) => res.json())
+      .then((data) => setData(data));
+  }, []);
+
   // google login
   const handleGoogleLogin = () => {
     signInusingGoogle().then((result) => {
       history.push(redirect_url);
-    });
+      const email = result.user.email;
+      const name = result.user.displayName;
+      const photo = result.user.photoURL;
+      const newUser = { name, email, photo };
+      setError("");
+      
+      let flag = 0;
+      for (const singleData of Data) {
+        if (singleData.email === email) {
+          flag = 1;
+          return;
+        }
+      }
+       if (flag === 0) {
+         fetch("https://obscure-shelf-23886.herokuapp.com/users", {
+           method: "POST",
+           headers: { "content-type": "application/json" },
+           body: JSON.stringify(newUser),
+         })
+           .then((res) => res.json())
+           .then((data) => {
+             if (data.insertedId) {
+               alert("Successfully added the user.");
+               // e.target.reset();
+             }
+           });
+       }
+
+    })
+
   };
 
   // genarel login
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [Name, setName] = useState("");
+  const [name, setName] = useState("");
   const [error, setError] = useState("");
 
   const handleEmailChange = (e) => {
@@ -44,9 +81,38 @@ const Registration = () => {
       return;
     }
 
-    createUserWithEmailAndPassword(auth, email, password, Name)
+    createUserWithEmailAndPassword(auth, email, password, name)
       .then((result) => {
         history.push(redirect_url);
+
+        const email = result.user.email;
+        const name = result.user.displayName;
+        const photo = result.user.photoURL;
+        const newUser = { name, email, photo };
+        setError("");
+
+        let flag = 0;
+        for (const singleData of Data) {
+          if (singleData.email === email) {
+            flag = 1;
+            return;
+          }
+        }
+        if (flag === 0) {
+          fetch("https://obscure-shelf-23886.herokuapp.com/users", {
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(newUser),
+          })
+            .then((res) => res.json())
+            .then((data) => {
+              if (data.insertedId) {
+                alert("Successfully added the user.");
+                // e.target.reset();
+              }
+            });
+        }
+
       })
       .catch((error) => {
         setError(error.message);
@@ -56,7 +122,7 @@ const Registration = () => {
   return (
     <div className="log-style">
       <div className="container">
-        <div className="row">
+        <div className="row main-login">
           <div className="col-12 py-5 d-flex justify-content-center">
             <div className="main-login">
               <form
@@ -105,7 +171,10 @@ const Registration = () => {
                 <br />
                 <p className="mt-2 err">{error}</p>
                 <div className="d-flex justify-content-center">
-                  <button className="btn m-2 login head-btn" type="submit">
+                  <button
+                    className="btn m-2 login head-btn btn-primary"
+                    type="submit"
+                  >
                     Sign Up
                   </button>
                 </div>
@@ -118,10 +187,7 @@ const Registration = () => {
                 <hr className="cus-hr" />
                 <div className="online-login">
                   <div className="d-flex justify-content-center">
-                    <button
-                      className="registar"
-                      onClick={handleGoogleLogin}
-                    >
+                    <button className="registar" onClick={handleGoogleLogin}>
                       <nav className="btn-nav">
                         <ul className="btn-ul">
                           <li className="btn-li">
